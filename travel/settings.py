@@ -164,194 +164,41 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # JAZZMIN ADMIN SETTINGS
 # ==========================================
 
-# ==========================================
-# JAZZMIN PREMIUM SETTINGS
-# ==========================================
-
 JAZZMIN_SETTINGS = {
 
-    # --------------------------------------------------
-    # GENERAL
-    # --------------------------------------------------
-
-    "site_title": "Vibhu Travel Hub",
+    "site_title": "Vibhu Travel Hub Admin",
 
     "site_header": "Vibhu Travel Hub",
 
     "site_brand": "Vibhu Travel Hub",
 
-    "site_logo": "images/logo/logo.JPG.jpeg",
-
-    "login_logo": "images/logo/logo.JPG.jpeg",
-
-    "login_logo_dark": "images/logo/logo.JPG.jpeg",
-
-    "site_logo_classes": "img-circle",
-
     "welcome_sign": "Welcome to Vibhu Travel Hub Administration",
 
-    "copyright": "© 2026 Vibhu Travel Hub",
+    "copyright": "Vibhu Travel Hub",
 
-    "site_icon": "images/favicon.ico",
-
-    # --------------------------------------------------
-    # UI
-    # --------------------------------------------------
+    "search_model": [
+        "website.Vehicle",
+        "website.Enquiry",
+    ],
 
     "show_sidebar": True,
 
     "navigation_expanded": True,
 
-    "hide_apps": [],
-
-    "hide_models": [],
-
-    "show_ui_builder": True,
-
-    "changeform_format": "horizontal_tabs",
-
-    "related_modal_active": True,
-
-    "language_chooser": False,
-
-    # --------------------------------------------------
-    # SEARCH
-    # --------------------------------------------------
-
-    "search_model": [
-
-        "website.Vehicle",
-
-        "website.Enquiry",
-
-        "auth.User",
-
-    ],
-
-    # --------------------------------------------------
-    # TOP MENU
-    # --------------------------------------------------
-
-    "topmenu_links": [
-
-        {
-
-            "name": "Dashboard",
-
-            "url": "admin:index",
-
-            "permissions": ["auth.view_user"]
-
-        },
-
-        {
-
-            "model": "website.Vehicle"
-
-        },
-
-        {
-
-            "model": "website.Enquiry"
-
-        },
-
-        {
-
-            "app": "website"
-
-        },
-
-    ],
-
-    # --------------------------------------------------
-    # SIDE MENU ORDER
-    # --------------------------------------------------
-
-    "order_with_respect_to": [
-
-        "website",
-
-        "auth",
-
-    ],
-
-    # --------------------------------------------------
-    # ICONS
-    # --------------------------------------------------
-
     "icons": {
 
-        "auth": "fas fa-users-cog",
+        "website.vehicle": "fas fa-bus",
+
+        "website.enquiry": "fas fa-phone",
 
         "auth.user": "fas fa-user",
 
-        "auth.Group": "fas fa-users",
-
-        "website.Vehicle": "fas fa-bus",
-
-        "website.Enquiry": "fas fa-phone-volume",
+        "auth.group": "fas fa-users",
 
     },
 
     "default_icon_parents": "fas fa-folder",
 
-    "default_icon_children": "fas fa-circle",
-
-    # --------------------------------------------------
-    # BUTTONS
-    # --------------------------------------------------
-
-    "actions_sticky_top": True,
-
-}
-
-JAZZMIN_UI_TWEAKS = {
-
-    "theme": "darkly",
-
-    "dark_mode_theme": "darkly",
-
-    "navbar": "navbar-dark navbar-danger",
-
-    "accent": "accent-danger",
-
-    "navbar_small_text": False,
-
-    "footer_small_text": False,
-
-    "body_small_text": False,
-
-    "brand_small_text": False,
-
-    "sidebar_nav_small_text": False,
-
-    "sidebar_disable_expand": False,
-
-    "sidebar_nav_child_indent": True,
-
-    "sidebar_nav_compact_style": False,
-
-    "sidebar_nav_legacy_style": False,
-
-    "sidebar_nav_flat_style": False,
-
-    "theme_colour": "navbar-danger",
-
-    "button_classes": {
-
-        "primary": "btn-danger",
-
-        "secondary": "btn-dark",
-
-        "info": "btn-info",
-
-        "warning": "btn-warning",
-
-        "danger": "btn-danger",
-
-        "success": "btn-success"
-
-    }
+    "default_icon_children": "fas fa-file",
 
 }
