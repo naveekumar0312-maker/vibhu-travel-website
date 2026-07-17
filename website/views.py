@@ -1,10 +1,15 @@
 from urllib.parse import quote
 from django.shortcuts import redirect, render
-from .models import Enquiry
+from .models import Enquiry, Vehicle
 
 
 def home(request):
-    return render(request, "website/home.html")
+
+    vehicles = Vehicle.objects.filter(available=True)
+
+    return render(request, "home.html", {
+        "vehicles": vehicles,
+    })
 
 
 def send_enquiry(request):
