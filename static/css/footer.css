@@ -1,0 +1,654 @@
+/*==========================================================
+                    PREMIUM FOOTER
+==========================================================*/
+
+.footer-section{
+
+    position:relative;
+
+    background:#070707;
+
+    padding:110px 0 30px;
+
+    overflow:hidden;
+
+}
+
+/*==========================================================
+                    TOP GLOW
+==========================================================*/
+
+.footer-glow{
+
+    position:absolute;
+
+    top:-180px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(255,0,0,.22) 0%,
+    rgba(255,0,0,.08) 40%,
+    transparent 75%);
+
+    filter:blur(80px);
+
+    pointer-events:none;
+
+}
+
+/*==========================================================
+                GRID BACKGROUND
+==========================================================*/
+
+.footer-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+    background-size:55px 55px;
+
+    opacity:.35;
+
+}
+
+/*==========================================================
+                CONTAINER
+==========================================================*/
+
+.footer-section .container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==========================================================
+                LOGO
+==========================================================*/
+
+.footer-logo{
+
+    width:95px;
+
+    margin-bottom:25px;
+
+    transition:.45s;
+
+}
+
+.footer-logo:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==========================================================
+                COMPANY
+==========================================================*/
+
+.footer-about h3{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.footer-about p{
+
+    color:#cfcfcf;
+
+    line-height:32px;
+
+    font-size:17px;
+
+}
+
+/*==========================================================
+                SOCIAL
+==========================================================*/
+
+.footer-social{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.footer-social a{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    text-decoration:none;
+
+    transition:.4s;
+
+}
+
+.footer-social a:hover{
+
+    background:#ff2020;
+
+    color:#ffffff;
+
+    transform:translateY(-6px) rotate(360deg);
+
+    box-shadow:0 15px 35px rgba(255,0,0,.35);
+
+}
+
+/*==========================================================
+                LINKS
+==========================================================*/
+
+.footer-links h4,
+
+.footer-contact h4{
+
+    color:#ffffff;
+
+    font-size:26px;
+
+    margin-bottom:30px;
+
+    position:relative;
+
+}
+
+.footer-links h4::after,
+
+.footer-contact h4::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-12px;
+
+    width:60px;
+
+    height:3px;
+
+    background:#ff2020;
+
+    border-radius:10px;
+
+}
+
+.footer-links ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.footer-links ul li{
+
+    margin-bottom:18px;
+
+}
+
+.footer-links ul li a{
+
+    color:#d8d8d8;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.footer-links ul li a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-3px;
+
+    width:0;
+
+    height:2px;
+
+    background:#ff2020;
+
+    transition:.35s;
+
+}
+
+.footer-links ul li a:hover{
+
+    color:#ffffff;
+
+    transform:translateX(8px);
+
+}
+
+.footer-links ul li a:hover::before{
+
+    width:100%;
+
+}
+
+/*==========================================================
+                SERVICES LIST
+==========================================================*/
+
+.footer-links li{
+
+    color:#d8d8d8;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+.footer-links li:hover{
+
+    color:#ffffff;
+
+    transform:translateX(8px);
+
+}
+
+/*==========================================================
+                    CONTACT INFO
+==========================================================*/
+
+.footer-contact p{
+
+    color:#d8d8d8;
+
+    font-size:17px;
+
+    line-height:32px;
+
+    margin-bottom:18px;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    transition:.35s;
+
+}
+
+.footer-contact p:hover{
+
+    color:#ffffff;
+
+    transform:translateX(8px);
+
+}
+
+.footer-contact i{
+
+    color:#ff2020;
+
+    font-size:20px;
+
+    margin-top:5px;
+
+}
+
+/*==========================================================
+                    BUTTON
+==========================================================*/
+
+.footer-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:18px;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff2020,#d10000);
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:0 15px 35px rgba(255,0,0,.28);
+
+}
+
+.footer-btn:hover{
+
+    color:#ffffff;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 55px rgba(255,0,0,.40);
+
+}
+
+/*==========================================================
+                FOOTER DIVIDER
+==========================================================*/
+
+.footer-bottom{
+
+    margin-top:70px;
+
+    padding-top:30px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.footer-bottom p{
+
+    color:#cfcfcf;
+
+    margin:0;
+
+    font-size:16px;
+
+    letter-spacing:.5px;
+
+}
+
+/*==========================================================
+                TOP BORDER
+==========================================================*/
+
+.footer-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        #ff2020,
+
+        #ffffff,
+
+        #ff2020,
+
+        transparent
+
+    );
+
+}
+
+/*==========================================================
+                SCROLL TO TOP
+==========================================================*/
+
+.scroll-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#ff2020;
+
+    color:#ffffff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    text-decoration:none;
+
+    box-shadow:0 20px 40px rgba(255,0,0,.30);
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+.scroll-top:hover{
+
+    color:#ffffff;
+
+    transform:translateY(-8px) scale(1.08);
+
+    box-shadow:0 30px 60px rgba(255,0,0,.45);
+
+}
+
+/*==========================================================
+                HOVER ANIMATION
+==========================================================*/
+
+.footer-about,
+
+.footer-links,
+
+.footer-contact{
+
+    transition:.4s;
+
+}
+
+.footer-about:hover,
+
+.footer-links:hover,
+
+.footer-contact:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/*==========================================================
+                RESPONSIVE
+==========================================================*/
+
+@media(max-width:991px){
+
+.footer-section{
+
+padding:90px 0 25px;
+
+}
+
+.footer-about{
+
+margin-bottom:25px;
+
+}
+
+.footer-links{
+
+margin-bottom:20px;
+
+}
+
+.footer-bottom{
+
+margin-top:45px;
+
+}
+
+}
+
+@media(max-width:767px){
+
+.footer-section{
+
+padding:70px 0 20px;
+
+text-align:center;
+
+}
+
+.footer-logo{
+
+width:75px;
+
+}
+
+.footer-about h3{
+
+font-size:28px;
+
+}
+
+.footer-about p{
+
+font-size:15px;
+
+line-height:28px;
+
+}
+
+.footer-links h4,
+
+.footer-contact h4{
+
+font-size:22px;
+
+margin-top:20px;
+
+}
+
+.footer-links h4::after,
+
+.footer-contact h4::after{
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.footer-social{
+
+justify-content:center;
+
+}
+
+.footer-contact p{
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+.footer-btn{
+
+width:100%;
+
+}
+
+.footer-bottom p{
+
+font-size:14px;
+
+}
+
+.scroll-top{
+
+width:52px;
+
+height:52px;
+
+font-size:20px;
+
+right:20px;
+
+bottom:20px;
+
+}
+
+}

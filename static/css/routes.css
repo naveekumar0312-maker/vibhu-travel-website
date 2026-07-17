@@ -1,0 +1,343 @@
+/*==========================================================
+                    ROUTES SECTION
+==========================================================*/
+
+.routes-section{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.routes-section .section-heading{
+
+    margin-bottom:70px;
+
+}
+
+.routes-section .section-heading h2{
+
+    font-size:58px;
+
+    font-weight:800;
+
+    color:#111;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.routes-section .section-heading span{
+
+    color:#ff2d2d;
+
+}
+
+.routes-section .section-heading p{
+
+    font-size:19px;
+
+    color:#666;
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+/*==========================================================
+                    ROUTE CARD
+==========================================================*/
+
+.route-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+    transition:.4s;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.route-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.18);
+
+}
+
+
+/*==========================================================
+                    IMAGE
+==========================================================*/
+
+.route-image{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.route-card:hover .route-image{
+
+    transform:scale(1.08);
+
+}
+
+
+/*==========================================================
+                    BODY
+==========================================================*/
+
+.route-body{
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.route-body h3{
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:#111;
+
+    margin-bottom:18px;
+
+}
+
+.route-body p{
+
+    color:#555;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+}
+
+
+/*==========================================================
+                    LIST
+==========================================================*/
+
+.route-body ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-bottom:30px;
+
+}
+
+.route-body ul li{
+
+    margin-bottom:14px;
+
+    color:#444;
+
+    font-size:17px;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.route-body ul li::before{
+
+    content:"✓";
+
+    color:#ff2d2d;
+
+    font-weight:700;
+
+    margin-right:10px;
+
+    font-size:18px;
+
+}
+
+
+/*==========================================================
+                    BUTTON
+==========================================================*/
+
+.route-btn{
+
+    margin-top:auto;
+
+    display:block;
+
+    text-align:center;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#ff2d2d,#b80000);
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    text-decoration:none;
+
+}
+
+.route-btn:hover{
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(255,0,0,.30);
+
+}
+
+
+/*==========================================================
+                    RESPONSIVE
+==========================================================*/
+
+@media(max-width:1200px){
+
+    .route-image{
+
+        height:220px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .routes-section{
+
+        padding:90px 0;
+
+    }
+
+    .routes-section .section-heading h2{
+
+        font-size:46px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .routes-section{
+
+        padding:80px 0;
+
+    }
+
+    .routes-section .section-heading{
+
+        margin-bottom:50px;
+
+    }
+
+    .routes-section .section-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .routes-section .section-heading p{
+
+        font-size:16px;
+
+    }
+
+    .route-image{
+
+        height:220px;
+
+    }
+
+    .route-body{
+
+        padding:24px;
+
+    }
+
+    .route-body h3{
+
+        font-size:28px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .route-image{
+
+        height:200px;
+
+    }
+
+    .route-body{
+
+        padding:20px;
+
+    }
+
+    .route-body h3{
+
+        font-size:24px;
+
+    }
+
+    .route-body p{
+
+        font-size:15px;
+
+    }
+
+    .route-btn{
+
+        font-size:16px;
+
+    }
+
+}
