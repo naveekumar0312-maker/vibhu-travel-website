@@ -413,40 +413,31 @@ href="{% static 'css/animation.css' %}">
         PREMIUM VEHICLE COLLECTION
 ========================================== -->
 
-<!--==========================================================
-                    OUR FLEET
-===========================================================-->
-
-<section class="fleet-section py-5"
-         id="Fleet">
+<section id="Fleet" class="vehicle-section">
 
     <div class="container">
 
         <!-- Heading -->
 
-        <div class="section-title text-center mb-5">
+        <div class="section-heading text-center">
 
-            <span class="section-tag">
+            <span class="section-badge">
 
-                OUR VEHICLES
+                MORE VEHICLES
 
             </span>
 
             <h2>
 
-                Choose The Perfect Vehicle
-                <br>
+                Premium
 
-                For Your Journey
+                <span>Travel Vehicles</span>
 
             </h2>
 
             <p>
 
-                Vibhu Travel Hub offers premium Taxi, SUV, Tempo Traveller,
-                Mini Bus and Luxury Bus rental services for family trips,
-                corporate travel, pilgrimages, airport transfers and
-                outstation tours.
+                Choose the perfect vehicle based on your group size and travel requirements.
 
             </p>
 
@@ -454,111 +445,61 @@ href="{% static 'css/animation.css' %}">
 
         <!-- Vehicle Cards -->
 
-        <div class="row g-4">
+        <div class="row justify-content-center g-4">
 
-            {% for vehicle in vehicles %}
+           <!-- Vehicle 1 -->
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
 
-                <div class="vehicle-card reveal-scale">
+                <div class="vehicle-card reveal-scale w-100">
 
-                    <!-- Vehicle Image -->
+                    <img src="{% static 'images/vehicles/sedan.png' %}"
+                 class="img-fluid vehicle-image"
+                 alt="Tempo Traveller Non AC">
 
-                    <div class="vehicle-image-wrapper">
-
-                        <img src="{{ vehicle.image.url }}"
-                             alt="{{ vehicle.name }}"
-                             class="img-fluid vehicle-image">
+                    <div class="vehicle-body">
 
                         <span class="vehicle-badge">
 
-                            {{ vehicle.seats }} Seater
+                            Best for 1 - 4 Members
 
                         </span>
 
-                    </div>
-
-                    <!-- Vehicle Content -->
-
-                    <div class="vehicle-content">
-
                         <h3>
 
-                            {{ vehicle.name }}
+                            Sedan – 4 Seater
 
                         </h3>
 
-                        <div class="vehicle-type">
-
-                            {{ vehicle.vehicle_type }}
-
-                        </div>
-
                         <div class="vehicle-price">
 
-                            ₹ {{ vehicle.price }}
+                            ₹3,500 / Day
 
                         </div>
 
                         <p>
 
-                            {{ vehicle.description }}
+                            Ideal for local city rides, airport transfer,
+                            railway station pickup, business trips and short outstation journeys..
 
                         </p>
 
-                        <!-- Features -->
+                        <ul>
 
-                        <ul class="vehicle-features">
+                            <li>AC comfort & clean cabin</li>
 
-                            <li>
+                            <li>Economical local/outstation</li>
 
-                                <i class="bi bi-check-circle-fill"></i>
-
-                                Professional Driver
-
-                            </li>
-
-                            <li>
-
-                                <i class="bi bi-check-circle-fill"></i>
-
-                                Fully Sanitized Vehicle
-
-                            </li>
-
-                            <li>
-
-                                <i class="bi bi-check-circle-fill"></i>
-
-                                Comfortable Seating
-
-                            </li>
-
-                            <li>
-
-                                <i class="bi bi-check-circle-fill"></i>
-
-                                24×7 Customer Support
-
-                            </li>
+                            <li>Professional driver support</li>
 
                         </ul>
 
-                                                <!-- Buttons -->
+                         <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
 
-                        <div class="vehicle-buttons">
-
-                            <a href="https://wa.me/919655866660?text=Hello%20Vibhu%20Travel%20Hub%2C%0A%0AI%20would%20like%20to%20book%20the%20{{ vehicle.name }}.%0A%0APlease%20share%20the%20availability%2C%20pricing%20and%20booking%20details.%0A%0AThank%20you."
-                               target="_blank"
-                               class="vehicle-btn">
-
-                                <i class="bi bi-whatsapp"></i>
-
-                                Book Now
-
-                            </a>
-
-                        </div>
+</a>
 
                     </div>
 
@@ -566,36 +507,553 @@ href="{% static 'css/animation.css' %}">
 
             </div>
 
-            {% empty %}
+            <!-- Vehicle 2 -->
 
-            <div class="col-12">
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
 
-                <div class="alert alert-warning text-center">
+                <div class="vehicle-card reveal-scale w-100">
 
-                    <h4 class="mb-2">
+                    <img src="{% static 'images/vehicles/ertiga.png' %}"
+                 class="img-fluid vehicle-image"
+                 alt="20 Seater">
 
-                        No Vehicles Available
+                    <div class="vehicle-body">
 
-                    </h4>
+                        <span class="vehicle-badge">
 
-                    <p class="mb-0">
+                            Best for 5 - 7 Members
 
-                        Vehicles will be available soon. Please contact Vibhu Travel Hub for more details.
+                        </span>
 
-                    </p>
+                        <h3>
+
+                           Ertiga – 7 Seater
+
+
+                        </h3>
+
+                        <div class="vehicle-price">
+
+                            ₹4,500 / Day
+
+                        </div>
+
+                        <p>
+
+                            Comfortable 7-seater MPV offering flexible seating and great value for family trips and outstation travel.
+                        </p>
+
+                        <ul>
+
+                            <li>Double blower AC cooling</li>
+
+                            <li>Budget-friendly SUV choice</li>
+
+                            <li>Ideal for family outings</li>
+
+                        </ul>
+
+                         <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
+
+</a>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            {% endfor %}
+            <!-- Vehicle 3 -->
+
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+
+                <div class="vehicle-card reveal-scale w-100">
+
+                    <img src="{% static 'images/vehicles/innova.png' %}"
+                 class="img-fluid vehicle-image"
+                 alt="26 Seater">
+
+                    <div class="vehicle-body">
+
+                        <span class="vehicle-badge">
+
+                            Best for 5 - 7 Members
+
+                        </span>
+
+                        <h3>
+
+                            Innova Crysta – 7 Seater
+
+                        </h3>
+
+                        <div class="vehicle-price">
+
+                            ₹6,000 / Day
+
+                        </div>
+
+                        <p>
+
+                            Premium Toyota Innova Crysta for high-end comfort, luxury family outings, and long outstation journeys.
+                        </p>
+
+                        <ul>
+
+                            <li>Premium captain seats</li>
+
+                            <li>Superior ride suspension</li>
+
+                            <li>Ample trunk space</li>
+
+                        </ul>
+
+                         <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
+
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Vehicle 4 -->
+
+            <div class="col-12 col-sm-6 col-lg-3 d-flex">
+
+                <div class="vehicle-card reveal-scale w-100">
+
+                    <img src="{% static 'images/vehicles/minibus.png' %}"
+                 class="img-fluid vehicle-image"
+                 alt="Mini Bus">
+
+                    <div class="vehicle-body">
+
+                        <span class="vehicle-badge">
+
+                            Best for 8 - 12 Members
+
+                        </span>
+
+                        <h3>
+
+                            Tempo Traveller AC – 12 Seater
+
+                        </h3>
+
+                        <div class="vehicle-price">
+
+                            ₹7,500 / Day
+
+                        </div>
+
+                        <p>
+
+                           Fully air-conditioned Tempo Traveller with pushback luxury seats, ideal for medium groups and family tours..
+
+                        </p>
+
+                        <ul>
+
+                            <li>Premium AC system</li>
+
+                            <li>Pushback reclining seats</li>
+
+                            <li>Onboard media system</li>
+
+                        </ul>
+
+                        <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
+
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    <!-- ==========================================
+        SECOND ROW
+========================================== -->
+
+<div class="row g-4 mt-2">
+
+    <!-- Vehicle 5 -->
+
+    <div class="col-12 col-sm-6 col-lg-3 d-flex">
+
+        <div class="vehicle-card reveal-scale">
+
+            <img src="{% static 'images/vehicles/tempo_nonac.png' %}"
+                         class="img-fluid vehicle-image"
+                         alt="Tempo Traveller">
+
+            <div class="vehicle-body">
+
+                <span class="vehicle-badge">
+                    Best for 8 - 12 Members
+                </span>
+
+                <h3>
+                    Tempo Traveller
+
+                            <br>
+
+                            Non AC - 12 Seater
+                    
+                </h3>
+
+                <div class="vehicle-price">
+                     ₹6,500 / Day
+                </div>
+
+                <p>
+                  Budget friendly vehicle for local trips,
+                  pilgrimages and family travel.
+
+                </p>
+
+                <ul>
+
+                    <li>Comfortable Group Travel</li>
+
+                    <li>Most Budget Friendly</li>
+
+                    <li>Spacious Seating</li>
+
+                </ul>
+
+                 <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
+
+</a>
+
+            </div>
 
         </div>
 
     </div>
 
-</section>
+    <!-- Vehicle 6 -->
 
+    <div class="col-12 col-sm-6 col-lg-3 d-flex">
+
+        <div class="vehicle-card reveal-scale">
+
+            <img src="{% static 'images/vehicles/traveller_20.png' %}"
+                         class="img-fluid vehicle-image"
+                         alt="20 Seater">
+
+            <div class="vehicle-body">
+
+                <span class="vehicle-badge">
+                    Best for 15 - 20 Members
+                </span>
+
+                <h3>
+                    Traveller Coach
+
+                    <br>
+
+                    20 Seater
+                </h3>
+
+                <div class="vehicle-price">
+                    ₹10,000 / Day
+                </div>
+
+                <p>
+                    Mid-sized luxury coach providing comfortable seating and ample storage for corporate events and medium tours
+                </p>
+
+                <ul>
+
+                    <li>AC Luxury Cabin</li>
+
+                    <li>Wide Aisle Space</li>
+
+                    <li>Corporate Tours</li>
+
+                </ul>
+
+                 <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
+</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Vehicle 7 -->
+
+    <div class="col-12 col-sm-6 col-lg-3 d-flex">
+
+        <div class="vehicle-card reveal-scale">
+
+            <img src="{% static 'images/vehicles/traveller_26.png' %}"
+                         class="img-fluid vehicle-image"
+                         alt="26 Seater">
+
+            <div class="vehicle-body">
+
+                <span class="vehicle-badge">
+                    Best for 20 - 26 Members
+                </span>
+
+                <h3>
+                    Traveller Coach
+
+                            <br>
+
+                            26 Seater
+                </h3>
+
+                <div class="vehicle-price">
+                    ₹12,000 / Day
+                </div>
+
+                <p>
+                    High-capacity luxury traveller coach designed for larger groups, family functions, and temple excursions
+                </p>
+
+                <ul>
+
+                    <li>Individual AC control vents</li>
+
+                    <li>Pushback seats with armrest</li>
+
+                    <li>Spacious overhead luggage</li>
+
+                </ul>
+
+                 <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
+
+</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Vehicle 8 -->
+
+    <div class="col-12 col-sm-6 col-lg-3 d-flex">
+
+        <div class="vehicle-card reveal-scale">
+
+            <img src="{% static 'images/vehicles/traveller.png' %}"
+                         class="img-fluid vehicle-image"
+                         alt="Mini Bus">
+
+            <div class="vehicle-body">
+
+                <span class="vehicle-badge">
+                    Best for 25 - 30 Members
+                </span>
+
+                <h3>
+                     Mini Bus
+
+                        <br>
+
+                    30 Seater
+                </h3>
+
+                <div class="vehicle-price">
+                    ₹14,000 / Day
+                </div>
+
+                <p>
+                    Comfortable 30-seater mini bus, perfect for city tours, corporate outings, and wedding guest transport.
+                </p>
+
+                <ul>
+
+                    <li>Air-suspension comfort</li>
+
+                    <li>Individual AC cooling</li>
+
+                    <li>Spacious comfortable seats</li>
+
+                </ul>
+
+                <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20would%20like%20to%20book%20this%20vehicle."
+   target="_blank"
+   class="vehicle-btn">
+    Book Now
+
+</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+        THIRD ROW
+========================================== -->
+
+<div class="row justify-content-center g-4 mt-2">
+
+    <!-- Vehicle 9 -->
+
+    <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+
+        <div class="vehicle-card reveal-scale w-100">
+
+            <img src="{% static 'images/vehicles/coachbus.png' %}"
+                 class="img-fluid vehicle-image"
+                 alt="30 Seater Coach">
+
+            <div class="vehicle-body">
+
+                <span class="vehicle-badge">
+
+                    Best for 25 - 30 Members
+
+                </span>
+
+                <h3>
+
+                    Coach Bus
+
+                    <br>
+
+                    30 Seater
+
+                </h3>
+
+                <div class="vehicle-price">
+
+                    ₹16,000 / Day
+
+                </div>
+
+                <p>
+
+                    Premium AC coach bus suitable for marriage
+                    functions, corporate trips and long tours.
+
+                </p>
+
+                <ul>
+
+                    <li>Luxury Pushback Seats</li>
+
+                    <li>Large Luggage Space</li>
+
+                    <li>Professional Driver</li>
+
+                </ul>
+
+                <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20want%20to%20book%20the%2030%20Seater%20Coach%20Bus."
+                   target="_blank"
+                   class="vehicle-btn">
+
+                    Book Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Vehicle 10 -->
+
+    <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+
+        <div class="vehicle-card reveal-scale w-100">
+
+            <img src="{% static 'images/vehicles/luxurybus.png' %}"
+                 class="img-fluid vehicle-image"
+                 alt="Luxury 40 Seater">
+
+            <div class="vehicle-body">
+
+                <span class="vehicle-badge">
+
+                    Best for 30 - 40 Members
+
+                </span>
+
+                <h3>
+
+                    Luxury Bus
+
+                    <br>
+
+                    40 Seater
+
+                </h3>
+
+                <div class="vehicle-price">
+
+                    ₹20,000 / Day
+
+                </div>
+
+                <p>
+
+                    Premium luxury coach for large family tours,
+                    school trips and corporate travel.
+
+                </p>
+
+                <ul>
+
+                    <li>Luxury Recliner Seats</li>
+
+                    <li>Fully Air Conditioned</li>
+
+                    <li>Music & PA System</li>
+
+                </ul>
+
+                <a href="https://wa.me/919655866660?text=Hi%20Vibhu%20Travel%20Hub,%20I%20want%20to%20book%20the%2040%20Seater%20Luxury%20Bus."
+                   target="_blank"
+                   class="vehicle-btn">
+
+                    Book Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
 
 <section id="services" class="services-section">
 
