@@ -69,3 +69,39 @@ class Enquiry(models.Model):
     def __str__(self):
 
         return f"{self.name} | {self.vehicle} | {self.destination}"
+
+class Vehicle(models.Model):
+    VEHICLE_CHOICES = [
+        ("Sedan", "Sedan"),
+        ("Ertiga", "Ertiga"),
+        ("Innova Crysta", "Innova Crysta"),
+        ("Tempo Traveller AC", "Tempo Traveller AC"),
+        ("Tempo Traveller Non AC", "Tempo Traveller Non AC"),
+        ("Traveller Coach 20", "Traveller Coach 20"),
+        ("Traveller Coach 26", "Traveller Coach 26"),
+        ("Mini Bus", "Mini Bus"),
+        ("Coach Bus", "Coach Bus"),
+        ("Luxury Bus", "Luxury Bus"),
+    ]
+
+    name = models.CharField(max_length=100)
+
+    vehicle_type = models.CharField(
+        max_length=100,
+        choices=VEHICLE_CHOICES
+    )
+
+    seats = models.PositiveIntegerField()
+
+    image = models.ImageField(upload_to="vehicles/")
+
+    price = models.CharField(max_length=50)
+
+    description = models.TextField()
+
+    available = models.BooleanField(default=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name

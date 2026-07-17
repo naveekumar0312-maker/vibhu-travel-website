@@ -21,6 +21,10 @@ ALLOWED_HOSTS = []
 # ==========================================
 
 INSTALLED_APPS = [
+
+    # Jazzmin
+    "jazzmin",
+
     # Django Apps
     "django.contrib.admin",
     "django.contrib.auth",
@@ -31,6 +35,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     "website",
+
 ]
 
 # ==========================================
@@ -154,3 +159,46 @@ MEDIA_ROOT = BASE_DIR / "media"
 # ==========================================
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# ==========================================
+# JAZZMIN ADMIN SETTINGS
+# ==========================================
+
+JAZZMIN_SETTINGS = {
+
+    "site_title": "Vibhu Travel Hub Admin",
+
+    "site_header": "Vibhu Travel Hub",
+
+    "site_brand": "Vibhu Travel Hub",
+
+    "welcome_sign": "Welcome to Vibhu Travel Hub Administration",
+
+    "copyright": "Vibhu Travel Hub",
+
+    "search_model": [
+        "website.Vehicle",
+        "website.Enquiry",
+    ],
+
+    "show_sidebar": True,
+
+    "navigation_expanded": True,
+
+    "icons": {
+
+        "website.vehicle": "fas fa-bus",
+
+        "website.enquiry": "fas fa-phone",
+
+        "auth.user": "fas fa-user",
+
+        "auth.group": "fas fa-users",
+
+    },
+
+    "default_icon_parents": "fas fa-folder",
+
+    "default_icon_children": "fas fa-file",
+
+}
