@@ -1,4 +1,8 @@
 from pathlib import Path
+import os
+
+from decouple import config
+import dj_database_url
 
 # ==========================================
 # BASE DIRECTORY
@@ -10,11 +14,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 # ==========================================
 
-SECRET_KEY = "django-insecure-change-this-key"
+SECRET_KEY = config(
+    "SECRET_KEY",
+    default="django-insecure-change-this-key"
+)
 
-DEBUG = True
+DEBUG = config(
+    "DEBUG",
+    default=True,
+    cast=bool
+)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config(
+    "ALLOWED_HOSTS",
+    default="127.0.0.1,localhost,.onrender.com,vibhutravelhub.com,www.vibhutravelhub.com"
+).split(",")
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.onrender.com",
+    "https://vibhutravelhub.com",
+    "https://www.vibhutravelhub.com",
+]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # ==========================================
 # INSTALLED APPS
@@ -33,9 +55,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    # Local Apps
+    # Local App
     "website",
-
 ]
 
 # ==========================================
@@ -43,13 +64,23 @@ INSTALLED_APPS = [
 # ==========================================
 
 MIDDLEWARE = [
+
     "django.middleware.security.SecurityMiddleware",
+
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
     "django.contrib.sessions.middleware.SessionMiddleware",
+
     "django.middleware.common.CommonMiddleware",
+
     "django.middleware.csrf.CsrfViewMiddleware",
+
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+
     "django.contrib.messages.middleware.MessageMiddleware",
+
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
 ]
 
 # ==========================================
@@ -89,20 +120,18 @@ TEMPLATES = [
 WSGI_APPLICATION = "travel.wsgi.application"
 
 # ==========================================
-# DATABASE (MYSQL)
+# DATABASE
+# ==========================================
+
+# ==========================================
+# DATABASE (POSTGRESQL - RENDER)
 # ==========================================
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "travel_db",
-        "USER": "root",
-        "PASSWORD": "root",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-    }
+    "default": dj_database_url.config(
+        default=config("DATABASE_URL")
+    )
 }
-
 # ==========================================
 # PASSWORD VALIDATION
 # ==========================================
@@ -146,6 +175,8 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 # ==========================================
 # MEDIA FILES
 # ==========================================
@@ -161,7 +192,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # ==========================================
-# JAZZMIN ADMIN SETTINGS
+# JAZZMIN SETTINGS
 # ==========================================
 
 JAZZMIN_SETTINGS = {
@@ -174,7 +205,7 @@ JAZZMIN_SETTINGS = {
 
     "welcome_sign": "Welcome to Vibhu Travel Hub Administration",
 
-    "copyright": "Vibhu Travel Hub",
+    "copyright": "© 2026 Vibhu Travel Hub",
 
     "search_model": [
         "website.Vehicle",
@@ -185,11 +216,17 @@ JAZZMIN_SETTINGS = {
 
     "navigation_expanded": True,
 
+    "sidebar_disable_expand": False,
+
+    "related_modal_active": True,
+
+    "changeform_format": "horizontal_tabs",
+
     "icons": {
 
         "website.vehicle": "fas fa-bus",
 
-        "website.enquiry": "fas fa-phone",
+        "website.enquiry": "fas fa-phone-alt",
 
         "auth.user": "fas fa-user",
 
@@ -200,5 +237,7 @@ JAZZMIN_SETTINGS = {
     "default_icon_parents": "fas fa-folder",
 
     "default_icon_children": "fas fa-file",
+
+    "theme": "darkly",
 
 }
