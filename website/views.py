@@ -76,11 +76,16 @@ def robots_txt(request):
     lines = [
 
         "User-agent: *",
+
         "Allow: /",
-        "Disallow: /admin/login/",
-        "Disallow: /admin/logout/",
+
+        "Disallow: /admin/",
+
         "Sitemap: https://vibhutravelhub.com/sitemap.xml",
 
     ]
 
-    return HttpResponse("\n".join(lines), content_type="text/plain")
+    return HttpResponse(
+        "\n".join(lines),
+        content_type="text/plain"
+    )
