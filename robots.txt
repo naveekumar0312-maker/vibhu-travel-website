@@ -6,4 +6,4 @@ Disallow: /admin/login/
 
 Disallow: /admin/logout/
 
-Sitemap: https://vibhutravelhub.com/sitemap.xml
+Sitemap: https://www.vibhutravelhub.com/sitemap.xml
