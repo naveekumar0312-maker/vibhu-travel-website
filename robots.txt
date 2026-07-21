@@ -1,0 +1,9 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /admin/login/
+
+Disallow: /admin/logout/
+
+Sitemap: https://vibhutravelhub.com/sitemap.xml

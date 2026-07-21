@@ -2,6 +2,8 @@ from django.urls import path
 
 from . import views
 
+from website.views import robots_txt
+
 urlpatterns = [
 
     path(
@@ -52,5 +54,7 @@ path(
     views.corporate_travel,
     name="corporate_travel"
 ),
+
+path("robots.txt", robots_txt, name="robots"),
 
 ]

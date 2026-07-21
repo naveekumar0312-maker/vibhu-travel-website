@@ -1,6 +1,7 @@
 from urllib.parse import quote
 from django.shortcuts import redirect, render
 from .models import Enquiry
+from django.http import HttpResponse
 
 
 def home(request):
@@ -67,3 +68,19 @@ def pilgrimage_trips(request):
 
 def corporate_travel(request):
     return render(request, "services/corporate_travel.html")
+
+
+
+def robots_txt(request):
+
+    lines = [
+
+        "User-agent: *",
+        "Allow: /",
+        "Disallow: /admin/login/",
+        "Disallow: /admin/logout/",
+        "Sitemap: https://vibhutravelhub.com/sitemap.xml",
+
+    ]
+
+    return HttpResponse("\n".join(lines), content_type="text/plain")
