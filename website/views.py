@@ -81,7 +81,7 @@ def robots_txt(request):
 
         "Disallow: /admin/",
 
-        "Sitemap: https://vibhutravelhub.com/sitemap.xml",
+        "Sitemap: https://www.vibhutravelhub.com/sitemap.xml",
 
     ]
 
