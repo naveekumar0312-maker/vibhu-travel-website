@@ -110,7 +110,10 @@ href="{% static 'css/animation.css' %}">
   "addressLocality": "Coimbatore",
   "addressRegion": "Tamil Nadu",
   "postalCode": "641018",
-  "addressCountry": "IN"
+  "addressCountry":{
+  "@type":"Country",
+  "name":"India"
+}
 },
   "priceRange":"₹₹₹",
   "openingHours":"Mo-Sa 09:30-22:00",
@@ -118,14 +121,54 @@ href="{% static 'css/animation.css' %}">
   "@type": "State",
   "name": "Tamil Nadu"
 },
-"serviceType":[
-  "Taxi Service",
-  "Bus Rental",
-  "Tempo Traveller",
-  "Corporate Travel",
-  "Pilgrimage Trips",
-  "Outstation Tours"
-],
+"hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Travel Services",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Taxi Service"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Bus Rental"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Tempo Traveller"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Corporate Travel"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Pilgrimage Trips"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Outstation Tours"
+      }
+    }
+  ]
+},
 
 "contactPoint":{
   "@type":"ContactPoint",
