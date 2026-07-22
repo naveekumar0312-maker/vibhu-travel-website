@@ -10,20 +10,23 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="{% block description %}Vibhu Travel Hub offers premium taxi services, bus rentals, tempo travellers, corporate travel, pilgrimage trips and outstation tours in Coimbatore and across Tamil Nadu.{% endblock %}">
+
     <title>
-
-        Vibhu Travel Hub | Best Travel Agency Coimbatore & Chennai
-
+        {% block title %}
+        Vibhu Travel Hub | Best Travel Agency in Coimbatore
+        {% endblock %}
     </title>
 
     <!-- Favicon -->
 
 <link rel="icon"
       type="image/jpeg"
-      href="{% static 'images/logo/logo.JPG.jpeg' %}">
+      href="{% static 'images/logo/logo.webp' %}">
 
 <link rel="shortcut icon"
-      href="{% static 'images/logo/logo.JPG.jpeg' %}">
+      href="{% static 'images/logo/logo.webp' %}">
 
     <!-- Bootstrap -->
 
@@ -85,8 +88,9 @@ href="{% static 'css/animation.css' %}">
         <a class="navbar-brand d-flex align-items-center"
            href="#home">
 
-            <img src="{% static 'images/logo/logo.webp' %}"
-                 class="logo">
+           <img src="{% static 'images/logo/logo.webp' %}"
+     alt="Vibhu Travel Hub Logo"
+     class="logo">
 
             <div class="ms-2">
 
@@ -292,6 +296,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/about/hero.webp' %}"
                          alt="About Vibhu Travel Hub"
+                         loading="lazy"
                          class="img-fluid rounded-4 shadow-lg">
 
                 </div>
@@ -457,6 +462,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/vehicles/sedan.webp' %}"
                  class="img-fluid vehicle-image"
+                 loading="lazy"
                  alt="Tempo Traveller Non AC">
 
                     <div class="vehicle-body">
@@ -517,6 +523,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/vehicles/ertiga.webp' %}"
                  class="img-fluid vehicle-image"
+                 loading="lazy"
                  alt="20 Seater">
 
                     <div class="vehicle-body">
@@ -576,6 +583,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/vehicles/innova.webp' %}"
                  class="img-fluid vehicle-image"
+                 loading="lazy"
                  alt="26 Seater">
 
                     <div class="vehicle-body">
@@ -634,6 +642,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/vehicles/minibus.webp' %}"
                  class="img-fluid vehicle-image"
+                 loading="lazy"
                  alt="Mini Bus">
 
                     <div class="vehicle-body">
@@ -701,6 +710,7 @@ href="{% static 'css/animation.css' %}">
 
             <img src="{% static 'images/vehicles/tempo_nonac.webp' %}"
                          class="img-fluid vehicle-image"
+                         loading="lazy"
                          alt="Tempo Traveller">
 
             <div class="vehicle-body">
@@ -759,6 +769,7 @@ href="{% static 'css/animation.css' %}">
 
             <img src="{% static 'images/vehicles/traveller_20.webp' %}"
                          class="img-fluid vehicle-image"
+                         loading="lazy"
                          alt="20 Seater">
 
             <div class="vehicle-body">
@@ -813,6 +824,7 @@ href="{% static 'css/animation.css' %}">
 
             <img src="{% static 'images/vehicles/traveller_26.webp' %}"
                          class="img-fluid vehicle-image"
+                         loading="lazy"
                          alt="26 Seater">
 
             <div class="vehicle-body">
@@ -868,6 +880,7 @@ href="{% static 'css/animation.css' %}">
 
             <img src="{% static 'images/vehicles/traveller.webp' %}"
                          class="img-fluid vehicle-image"
+                         loading="lazy"
                          alt="Mini Bus">
 
             <div class="vehicle-body">
@@ -931,6 +944,7 @@ href="{% static 'css/animation.css' %}">
 
             <img src="{% static 'images/vehicles/coachbus.webp' %}"
                  class="img-fluid vehicle-image"
+                 loading="lazy"
                  alt="30 Seater Coach">
 
             <div class="vehicle-body">
@@ -996,6 +1010,7 @@ href="{% static 'css/animation.css' %}">
 
             <img src="{% static 'images/vehicles/luxurybus.webp' %}"
                  class="img-fluid vehicle-image"
+                 loading="lazy"
                  alt="Luxury 40 Seater">
 
             <div class="vehicle-body">
@@ -1084,6 +1099,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/services/taxi.webp' %}"
                          class="service-image"
+                         loading="lazy"
                          alt="Taxi Service">
 
                     <div class="service-body">
@@ -1120,6 +1136,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/services/bus.webp' %}"
                          class="service-image"
+                         loading="lazy"
                          alt="Bus Booking">
 
                     <div class="service-body">
@@ -1156,6 +1173,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/vehicles/tempo_nonac.webp' %}"
                          class="service-image"
+                         loading="lazy"
                          alt="Tempo Traveller">
 
                     <div class="service-body">
@@ -1191,6 +1209,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/services/outstation.webp' %}"
                          class="service-image"
+                         loading="lazy"
                          alt="Outstation Tour">
 
                     <div class="service-body">
@@ -1226,6 +1245,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/services/temple.webp' %}"
                          class="service-image"
+                         loading="lazy"
                          alt="Airport Transfer">
 
                     <div class="service-body">
@@ -1260,6 +1280,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/services/corporate.webp' %}"
                          class="service-image"
+                         loading="lazy"
                          alt="Wedding Transport">
 
                     <div class="service-body">
@@ -1331,6 +1352,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/routes/Ooty2.webp' %}"
                          class="route-image"
+                         loading="lazy"
                          alt="Ooty Tour">
 
                     <div class="route-body">
@@ -1380,6 +1402,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/routes/kerala2.webp' %}"
                          class="route-image"
+                         loading="lazy"
                          alt="Kerala Tour">
 
                     <div class="route-body">
@@ -1429,6 +1452,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/routes/temple2.webp' %}"
                          class="route-image"
+                         loading="lazy"
                          alt="Temple Tour">
 
                     <div class="route-body">
@@ -1478,6 +1502,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/routes/kodai2.webp' %}"
                          class="route-image"
+                         loading="lazy"
                          alt="Kodaikanal">
 
                     <div class="route-body">
@@ -1527,6 +1552,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/routes/poll.webp' %}"
                          class="route-image"
+                         loading="lazy"
                          alt="Mysore">
 
                     <div class="route-body">
@@ -1576,6 +1602,7 @@ href="{% static 'css/animation.css' %}">
 
                     <img src="{% static 'images/routes/coonoor2.webp' %}"
                          class="route-image"
+                         loading="lazy"
                          alt="Yercaud">
 
                     <div class="route-body">
@@ -1966,8 +1993,9 @@ href="{% static 'css/animation.css' %}">
 
                 <div class="contact-left">
 
-                    <img src="{% static 'images/logo/logo.JPG.jpeg' %}"
+                    <img src="{% static 'images/logo/logo.webp' %}"
                          class="contact-logo"
+                         loading="lazy"
                          alt="Logo">
 
                     <h3>Get In Touch</h3>

@@ -10,34 +10,90 @@
 
     <meta charset="UTF-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Description -->
 
     <meta name="description"
-        content="{% block description %}Vibhu Travel Hub - Premium Bus, Taxi, Tempo Traveller & Tour Packages{% endblock %}">
+          content="{% block description %}Vibhu Travel Hub offers premium taxi services, bus rentals, tempo travellers, corporate travel, pilgrimage trips and outstation tours in Coimbatore and across Tamil Nadu.{% endblock %}">
+
+    <!-- SEO Keywords -->
 
     <meta name="keywords"
-        content="Travel, Taxi, Bus Rental, Tempo Traveller, Tour Packages, Coimbatore">
+          content="{% block keywords %}Travel Agency Coimbatore, Taxi Service Coimbatore, Bus Rental Coimbatore, Tempo Traveller Rental, Corporate Travel, Outstation Tours, Pilgrimage Trips, Vibhu Travel Hub{% endblock %}">
 
     <meta name="author"
-        content="Vibhu Travel Hub">
+          content="Vibhu Travel Hub">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <!-- Canonical URL -->
+
+    <link rel="canonical"
+          href="{% block canonical %}https://www.vibhutravelhub.com/{% endblock %}">
+
+    <!-- ==========================================
+        TITLE
+    =========================================== -->
 
     <title>
         {% block title %}
-        Vibhu Travel Hub
+        Vibhu Travel Hub | Best Travel Agency in Coimbatore
         {% endblock %}
     </title>
-
-    <link rel="icon"
-      href="{% static 'images/logo/logo.JPG.jpeg' %}"
-      type="image/jpeg">
-
-{% block icon %}{% endblock %}
 
     <!-- ==========================================
         FAVICON
     =========================================== -->
+
+    <link rel="icon"
+          href="{% static 'images/logo/logo.webp' %}"
+          type="image/webp">
+
+    {% block icon %}{% endblock %}
+
+    <!-- ==========================================
+        OPEN GRAPH (Facebook / WhatsApp)
+    =========================================== -->
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:site_name"
+          content="Vibhu Travel Hub">
+
+    <meta property="og:title"
+          content="{% block og_title %}Vibhu Travel Hub{% endblock %}">
+
+    <meta property="og:description"
+          content="{% block og_description %}Premium Taxi, Bus Rental, Tempo Traveller & Tour Packages in Coimbatore.{% endblock %}">
+
+    <meta property="og:url"
+          content="{% block og_url %}https://www.vibhutravelhub.com/{% endblock %}">
+
+    <meta property="og:image"
+          content="https://www.vibhutravelhub.com/static/images/logo/logo.webp">
+
+    <!-- ==========================================
+        TWITTER CARD
+    =========================================== -->
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="{% block twitter_title %}Vibhu Travel Hub{% endblock %}">
+
+    <meta name="twitter:description"
+          content="{% block twitter_description %}Premium Taxi, Bus Rental, Tempo Traveller & Tour Packages in Coimbatore.{% endblock %}">
+
+    <meta name="twitter:image"
+          content="https://www.vibhutravelhub.com/static/images/logo/logo.webp">
 
     <!-- ==========================================
         GOOGLE FONTS
@@ -77,16 +133,12 @@
     <link rel="stylesheet"
           href="{% static 'css/style.css' %}">
 
-   
     {% block extra_css %}{% endblock %}
-
-    
 
 </head>
 
 <body>
 
-    
     <!-- ==========================================
         PAGE CONTENT
     =========================================== -->
@@ -94,7 +146,6 @@
     <main>
 
         {% block content %}
-
         {% endblock %}
 
     </main>
@@ -109,11 +160,7 @@
         PROJECT JS
     =========================================== -->
 
-    
-
     {% block extra_js %}{% endblock %}
-
-
 
 </body>
 
