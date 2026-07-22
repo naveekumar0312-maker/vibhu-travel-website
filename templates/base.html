@@ -16,12 +16,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Description -->
-
     <meta name="description"
           content="{% block description %}Vibhu Travel Hub offers premium taxi services, bus rentals, tempo travellers, corporate travel, pilgrimage trips and outstation tours in Coimbatore and across Tamil Nadu.{% endblock %}">
-
-    <!-- SEO Keywords -->
 
     <meta name="keywords"
           content="{% block keywords %}Travel Agency Coimbatore, Taxi Service Coimbatore, Bus Rental Coimbatore, Tempo Traveller Rental, Corporate Travel, Outstation Tours, Pilgrimage Trips, Vibhu Travel Hub{% endblock %}">
@@ -30,9 +26,14 @@
           content="Vibhu Travel Hub">
 
     <meta name="robots"
-          content="index, follow">
+          content="index,follow">
 
-    <!-- Canonical URL -->
+    <meta name="theme-color"
+          content="#000000">
+
+    <!-- ==========================================
+        CANONICAL
+    =========================================== -->
 
     <link rel="canonical"
           href="{% block canonical %}https://www.vibhutravelhub.com/{% endblock %}">
@@ -52,13 +53,16 @@
     =========================================== -->
 
     <link rel="icon"
-          href="{% static 'images/logo/logo.webp' %}"
-          type="image/webp">
+          type="image/webp"
+          href="{% static 'images/logo/logo.webp' %}">
+
+    <link rel="apple-touch-icon"
+          href="{% static 'images/logo/logo.webp' %}">
 
     {% block icon %}{% endblock %}
 
     <!-- ==========================================
-        OPEN GRAPH (Facebook / WhatsApp)
+        OPEN GRAPH
     =========================================== -->
 
     <meta property="og:type"
@@ -96,6 +100,22 @@
           content="https://www.vibhutravelhub.com/static/images/logo/og-banner.webp">
 
     <!-- ==========================================
+        DNS PREFETCH
+    =========================================== -->
+
+    <link rel="dns-prefetch"
+          href="//fonts.googleapis.com">
+
+    <link rel="dns-prefetch"
+          href="//fonts.gstatic.com">
+
+    <link rel="dns-prefetch"
+          href="//cdn.jsdelivr.net">
+
+    <link rel="dns-prefetch"
+          href="//cdnjs.cloudflare.com">
+
+    <!-- ==========================================
         GOOGLE FONTS
     =========================================== -->
 
@@ -108,6 +128,20 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
+
+    <!-- ==========================================
+        PRELOAD HERO IMAGE
+        (Change this path to your actual hero image)
+    =========================================== -->
+
+    {% block preload %}
+    <!-- Example -->
+    <!--
+    <link rel="preload"
+          as="image"
+          href="{% static 'images/home/hero.webp' %}">
+    -->
+    {% endblock %}
 
     <!-- ==========================================
         BOOTSTRAP CSS
@@ -135,9 +169,6 @@
 
     {% block extra_css %}{% endblock %}
 
-
-
-
 </head>
 
 <body>
@@ -157,10 +188,11 @@
         BOOTSTRAP JS
     =========================================== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- ==========================================
-        PROJECT JS
+        PAGE JS
     =========================================== -->
 
     {% block extra_js %}{% endblock %}
