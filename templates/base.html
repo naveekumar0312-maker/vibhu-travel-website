@@ -77,7 +77,7 @@
           content="{% block og_url %}https://www.vibhutravelhub.com/{% endblock %}">
 
     <meta property="og:image"
-          content="https://www.vibhutravelhub.com/static/images/logo/logo.webp">
+          content="https://www.vibhutravelhub.com/static/images/logo/og-banner.webp">
 
     <!-- ==========================================
         TWITTER CARD
@@ -93,7 +93,7 @@
           content="{% block twitter_description %}Premium Taxi, Bus Rental, Tempo Traveller & Tour Packages in Coimbatore.{% endblock %}">
 
     <meta name="twitter:image"
-          content="https://www.vibhutravelhub.com/static/images/logo/logo.webp">
+          content="https://www.vibhutravelhub.com/static/images/logo/og-banner.webp">
 
     <!-- ==========================================
         GOOGLE FONTS
@@ -134,6 +134,72 @@
           href="{% static 'css/style.css' %}">
 
     {% block extra_css %}{% endblock %}
+
+    <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Vibhu Travel Hub",
+  "url":"https://www.vibhutravelhub.com",
+  "logo":"https://www.vibhutravelhub.com/static/images/logo/logo.webp",
+  "image":"https://www.vibhutravelhub.com/static/images/logo/logo.webp",
+  "email":"mailto:vibhutravelhub66@gmail.com",
+  "telephone":"+91-9655866660",
+  "sameAs":[
+    "https://www.instagram.com/vibhu_travelhub",
+    "https://www.facebook.com/p/Vibhu-Travel-Hub-61590356873030/"
+  ]
+}
+
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TravelAgency",
+  "name":"Vibhu Travel Hub",
+  "image":"https://www.vibhutravelhub.com/static/images/logo/logo.webp",
+  "url":"https://www.vibhutravelhub.com",
+  "telephone":"+91-9655866660",
+  "email":"vibhutravelhub66@gmail.com",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Joyce Villa Building, 87, Grey Town",
+  "addressLocality": "Coimbatore",
+  "addressRegion": "Tamil Nadu",
+  "postalCode": "641018",
+  "addressCountry": "IN"
+},
+  "priceRange":"₹₹₹",
+  "openingHours":"Mo-Sa 09:30-22:00",
+  "areaServed": {
+  "@type": "State",
+  "name": "Tamil Nadu"
+},
+"serviceType":[
+  "Taxi Service",
+  "Bus Rental",
+  "Tempo Traveller",
+  "Corporate Travel",
+  "Pilgrimage Trips",
+  "Outstation Tours"
+],
+
+"contactPoint":{
+  "@type":"ContactPoint",
+  "telephone":"+91-9655866660",
+  "contactType":"customer service",
+  "areaServed":"IN",
+  "availableLanguage":[
+    "English",
+    "Tamil"
+  ]
+}
+
+}
+</script>
+
+
 
 </head>
 
