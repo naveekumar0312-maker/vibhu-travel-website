@@ -20,6 +20,7 @@ Book Pilgrimage Tour Packages from Coimbatore with Vibhu Travel Hub. Visit Palan
 
 {% endblock %}
 
+
 {% block content %}
 
 <section class="taxi-hero">
@@ -346,4 +347,27 @@ Book Pilgrimage Tour Packages from Coimbatore with Vibhu Travel Hub. Visit Palan
 
 </section>
 
+{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "name":"Home",
+     "item":"https://www.vibhutravelhub.com/"
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "name":"Pilgrimage Trips",
+     "item":"https://www.vibhutravelhub.com/services/pilgrimage-trips/"
+   }
+ ]
+}
+</script>
 {% endblock %}

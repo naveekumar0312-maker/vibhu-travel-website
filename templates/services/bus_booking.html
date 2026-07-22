@@ -22,6 +22,9 @@ Book the best Bus Rental in Coimbatore with Vibhu Travel Hub. Luxury Bus Rental,
 
 {% block content %}
 
+
+
+
 <!--==========================================================
                     HERO SECTION
 ===========================================================-->
@@ -403,5 +406,29 @@ Book the best Bus Rental in Coimbatore with Vibhu Travel Hub. Luxury Bus Rental,
     </div>
 
 </section>
+
+{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "name":"Home",
+     "item":"https://www.vibhutravelhub.com/"
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "name":"Bus Booking",
+     "item":"https://www.vibhutravelhub.com/services/bus-booking/"
+   }
+ ]
+}
+</script>
 
 {% endblock %}

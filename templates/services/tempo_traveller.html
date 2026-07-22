@@ -20,6 +20,7 @@ Book the best Tempo Traveller Rental in Coimbatore with Vibhu Travel Hub. Luxury
 
 {% endblock %}
 
+
 {% block content %}
 
 <!--==========================================================
@@ -408,4 +409,28 @@ Book the best Tempo Traveller Rental in Coimbatore with Vibhu Travel Hub. Luxury
 
 </section>
 
+{% endblock %}
+
+
+{% block schema %}
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "name":"Home",
+     "item":"https://www.vibhutravelhub.com/"
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "name":"Tempo Traveller",
+     "item":"https://www.vibhutravelhub.com/services/tempo-traveller/"
+   }
+ ]
+}
+</script>
 {% endblock %}
