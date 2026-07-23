@@ -1,3 +1,6 @@
+
+console.log("Navbar JS Loaded");
+
 window.addEventListener("scroll",function(){
 
     const navbar=document.querySelector(".custom-navbar");
