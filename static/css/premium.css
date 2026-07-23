@@ -11,8 +11,7 @@
     overflow:hidden;
 
     background:
-        linear-gradient(rgba(8,8,8,.82), rgba(8,8,8,.88)),
-        url("../images/backgrounds/images.jfif");
+        linear-gradient(rgba(8,8,8,.82), rgba(8,8,8,.88));
 
     background-size:cover;
 
