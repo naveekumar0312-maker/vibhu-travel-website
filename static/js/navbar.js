@@ -1,24 +1,38 @@
+// Navbar Scroll
+window.addEventListener("scroll", function () {
 
-console.log("Navbar JS Loaded");
+    const navbar = document.querySelector(".custom-navbar");
 
-window.addEventListener("scroll",function(){
-
-    const navbar=document.querySelector(".custom-navbar");
-
-    if(window.scrollY>50){
-
-        navbar.style.background="#000";
-
-        navbar.style.padding="14px 0";
-
+    if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
     }
 
-    else{
+});
 
-        navbar.style.background="rgba(0,0,0,.85)";
+// Mobile Navbar Toggle Fix
+document.addEventListener("DOMContentLoaded", function () {
 
-        navbar.style.padding="18px 0";
+    const menu = document.getElementById("mainNavbar");
+    const toggler = document.querySelector(".navbar-toggler");
 
-    }
+    if (!menu || !toggler) return;
+
+    const bsCollapse = new bootstrap.Collapse(menu, {
+        toggle: false
+    });
+
+    toggler.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        if (menu.classList.contains("show")) {
+            bsCollapse.hide();
+        } else {
+            bsCollapse.show();
+        }
+
+    });
 
 });
