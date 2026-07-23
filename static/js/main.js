@@ -2,26 +2,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const items = document.querySelectorAll(".aero-item");
 
-    items.forEach((item)=>{
+    items.forEach((item) => {
 
-        item.addEventListener("click",()=>{
+        item.querySelector(".aero-header").addEventListener("click", () => {
 
-            items.forEach((card)=>{
+            if (item.classList.contains("active")) {
 
-                if(card!==item){
+                item.classList.remove("active");
+
+            } else {
+
+                items.forEach((card) => {
 
                     card.classList.remove("active");
 
-                }
+                });
 
-            });
+                item.classList.add("active");
 
-            item.classList.toggle("active");
+            }
 
         });
 
     });
 
 });
-
-
