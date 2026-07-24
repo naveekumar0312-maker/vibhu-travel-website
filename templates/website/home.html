@@ -15,17 +15,17 @@ Travel Agency Coimbatore, Taxi Service Coimbatore, Bus Rental Coimbatore, Tempo 
 
 {% block extra_css %}
 
-<link rel="stylesheet" href="{% static 'css/animation.css' %}">
-<link rel="stylesheet" href="{% static 'css/contact.css' %}">
-<link rel="stylesheet" href="{% static 'css/footer.css' %}">
-<link rel="stylesheet" href="{% static 'css/premium.css' %}">
-<link rel="stylesheet" href="{% static 'css/routes.css' %}">
-<link rel="stylesheet" href="{% static 'css/services.css' %}">
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-<link rel="stylesheet" href="{% static 'css/taxi-service.css' %}">
-<link rel="stylesheet" href="{% static 'css/testimonial.css' %}">
-<link rel="stylesheet" href="{% static 'css/why.css' %}">
-<link rel="stylesheet" href="{% static 'css/whychoose.css' %}">
+<link rel="stylesheet" href="{% static 'css/animation-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/footer-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/premium-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/routes-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/services-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/taxi-service-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/testimonial-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/why-min.css' %}">
+<link rel="stylesheet" href="{% static 'css/whychoose-min.css' %}">
 
 
 
@@ -113,16 +113,62 @@ fetchpriority="high">
 
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item dropdown">
+     <a href="#"
+       class="nav-link dropdown-toggle"
+       id="servicesToggle">
 
-                    <a class="nav-link"
-                       href="#services">
+        Services
 
-                        Services
+    </a>
 
-                    </a>
+    <ul class="dropdown-menu"
+     id="servicesDropdown">
 
-                </li>
+        <li>
+            <a class="dropdown-item"
+               href="/services/local-taxi-service/">
+                Taxi Service
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item"
+               href="/services/bus-booking/">
+                Bus Rental
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item"
+               href="/services/tempo-traveller/">
+                Tempo Traveller
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item"
+               href="/services/outstation-tours/">
+                Outstation Tours
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item"
+               href="/services/pilgrimage-trips/">
+                Pilgrimage Tours
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item"
+               href="/services/corporate-travel/">
+                Corporate Travel
+            </a>
+        </li>
+
+    </ul>
+</li>
 
                 <li class="nav-item">
 
