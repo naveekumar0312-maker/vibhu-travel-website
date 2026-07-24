@@ -125,9 +125,6 @@ WSGI_APPLICATION = "travel.wsgi.application"
 # DATABASE
 # ==========================================
 
-# ==========================================
-# DATABASE (POSTGRESQL - RENDER)
-# ==========================================
 
 DATABASES = {
     'default': {
