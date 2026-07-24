@@ -130,9 +130,14 @@ WSGI_APPLICATION = "travel.wsgi.application"
 # ==========================================
 
 DATABASES = {
-    "default": dj_database_url.config(
-        default=config("DATABASE_URL")
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'travel_db',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+    }
 }
 # ==========================================
 # PASSWORD VALIDATION
